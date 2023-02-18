@@ -12,8 +12,8 @@
             for (int i = 0; i < userInputTotal; i++)
             {
                 Console.WriteLine("Enter a number: ");
-                int userInputNumber = Convert.ToInt32(Console.ReadLine());
-                sum += userInputNumber;
+                int userInputNumbers = Convert.ToInt32(Console.ReadLine());
+                sum += userInputNumbers;
             }
 
             Console.WriteLine($"The sum of your numbers is: {sum}.");

@@ -3,8 +3,7 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
-                       
+        {                    
             Console.Write("Input what kind of distance(in meters) you finished?: ");
             float distance = Convert.ToSingle(Console.ReadLine());
             Console.Write("Input full time(hours, minutes, seconds) it took you to finish the distance.\nStart with how many hours it took you to finish this distance: ");

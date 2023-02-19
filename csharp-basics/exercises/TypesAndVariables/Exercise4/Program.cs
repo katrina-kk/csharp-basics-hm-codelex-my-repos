@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-
             string fullName = "Katrina Kraukle";
             int year = 1993;
 

@@ -18,7 +18,6 @@
 
             Console.WriteLine($"The sum of your numbers is: {sum}.");
             Console.ReadKey();             
-
         }
     }
 }

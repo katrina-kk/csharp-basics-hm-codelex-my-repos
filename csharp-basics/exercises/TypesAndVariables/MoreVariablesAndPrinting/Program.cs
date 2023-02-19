@@ -6,7 +6,6 @@ namespace MoreVariablesAndPrinting
     {
         static void Main(string[] args)
         {
-
             string name = "Zed A. Shaw";
             int age = 35;
             int height = 74;  

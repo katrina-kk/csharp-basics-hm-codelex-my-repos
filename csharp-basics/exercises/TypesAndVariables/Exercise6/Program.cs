@@ -15,7 +15,6 @@
                 int userInputNumbers = Convert.ToInt32(Console.ReadLine());
                 sum += userInputNumbers;
             }
-
             Console.WriteLine($"The sum of your numbers is: {sum}.");
             Console.ReadKey();             
         }

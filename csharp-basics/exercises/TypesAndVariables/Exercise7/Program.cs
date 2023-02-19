@@ -20,8 +20,7 @@
                 {
                     Console.Write("");
                 }
-            }   
-            
+            }              
             Console.WriteLine($"You have  written a sentence using {countUpperCase} upper case letters.");
        }
     }

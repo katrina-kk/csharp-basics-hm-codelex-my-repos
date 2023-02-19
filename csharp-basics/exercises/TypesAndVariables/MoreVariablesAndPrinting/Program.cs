@@ -25,7 +25,6 @@ namespace MoreVariablesAndPrinting
             Console.WriteLine($"His teeth are usually {teeth} depending on the coffee.");
 
             Console.WriteLine($"If I add {age}, {heightInCm:0.00}, and {weightInKg:0.00}.  I get {totalMetricSystemSum:0.00}.");
-
             Console.ReadKey();
         }
     }

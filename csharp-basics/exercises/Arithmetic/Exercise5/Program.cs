@@ -20,8 +20,40 @@
 //> 42
 
 //You guessed it!  What are the odds?!?
+         
+            int randomNumber = new Random().Next(1, 101);
+            int userGuess = 0;
+            bool endGame = false;
+            Console.WriteLine("I will randomly choose a random number from 1-100. Can you guess it? \nEnter a number of your Choise?: ");
+           
 
-            Console.WriteLine("Hello, World!");
+            while (!endGame)
+            {
+                 userGuess= int.Parse(Console.ReadLine());
+
+                
+                if (userGuess < randomNumber)
+                {
+                    Console.WriteLine($"Too low. I was thinking {randomNumber}");
+                    continue;
+                }
+                else if (userGuess > randomNumber)
+                {
+                    Console.WriteLine($"Too high. I was thinking {randomNumber}");
+                    break;
+                    Console.WriteLine("Game Over");
+                }
+                else 
+                {
+                    endGame = true;
+                    Console.WriteLine($"You guessed it!  What are the odds?!? I was thinking {randomNumber}");
+
+                }
+            }
+
+            
+            Console.ReadKey();
+        }
+
         }
     }
-}

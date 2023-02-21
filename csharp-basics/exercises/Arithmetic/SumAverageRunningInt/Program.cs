@@ -23,16 +23,9 @@ namespace SumAverageRunningInt
                 sum += number;
 
             }
-
             average = sum / upperBound;
             Console.WriteLine($"The sum of 1 to 100 is {sum} \n The average is {average: 0.0}");
-
-        }
-         
-
-
-
-
         }
     }
+}
 

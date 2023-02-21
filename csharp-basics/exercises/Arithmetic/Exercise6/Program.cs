@@ -25,8 +25,7 @@
                 else if (i % 3 == 0 && i % 5 == 0)
                 {
                     Console.WriteLine("CozaLoza ");
-                }
-              
+                }             
                 else if (i % 5 == 0)
                 {
                     Console.Write("Loza ");
@@ -43,15 +42,12 @@
                 {
                     Console.WriteLine("");
                 }
-
-
             }
             Console.ReadKey();
-
         }
 
-        }
-        }
+    }
+}
 
        
     

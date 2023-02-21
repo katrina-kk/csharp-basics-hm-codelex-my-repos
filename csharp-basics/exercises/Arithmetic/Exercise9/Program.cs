@@ -13,34 +13,29 @@
 
             //Your program must accept metric units.
 
-            Console.WriteLine("What is your weight?");
+            Console.WriteLine("What is your weight in kg?");
             double weight = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("What is your height?");
+            Console.WriteLine("What is your height in cm?");
             double height = Convert.ToDouble(Console.ReadLine());
 
-            double poundsToKG = weight * 0.45;
-            double inchesToCM = height * 2.54;
-            double bmiToMetric = ((weight * 0.45) * 703) / Math.Pow(inchesToCM, 2));
+            double kgToPounds = weight * 2.2;
+            double cmToInches = height / 2.54;
+            double bmi = Math.Round((kgToPounds  * 703) / Math.Pow(cmToInches, 2), 1);
             
-
-            if(bmiToMetric >= 25)
+            if(bmi >= 25)
             {
-                Console.WriteLine($"You are owerweight. Your BMI is {Math.Round(bmiToMetric, 2)}");
+                Console.WriteLine($"You are owerweight. Your BMI is {bmi}");
             }
-            else if(bmiToMetric <= 18.5)
+            else if(bmi <= 18.5)
             {
                
-                Console.WriteLine($"You are underweight.Your BMI is {Math.Round(bmiToMetric, 2)}");
+                Console.WriteLine($"You are underweight.Your BMI is {bmi}");
             }
-            else if(bmiToMetric >= 18.5 && bmiToMetric >= 25)
+            else if(bmi >= 18.5 && bmi >= 25)
             {
                 
-                Console.WriteLine($"Your weight is optimal. Your BMI is {Math.Round(bmiToMetric, 2)}");
-            }
-            Console.ReadKey();
-
-           
-            
+                Console.WriteLine($"Your weight is optimal. Your BMI is {bmi}");
+            }                 
         }
     }
 }

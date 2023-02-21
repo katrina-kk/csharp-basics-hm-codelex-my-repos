@@ -35,6 +35,7 @@ namespace CalculateArea
 //Display an error message if the user enters a number outside the range of 1 through 4 when selecting an item from the menu.
 
            // Get the user's menu choice.
+           // pēc keys (switch if) jānolasa un jāizdara metode. 
         }
 
         public static int GetMenu()
@@ -106,6 +107,7 @@ namespace CalculateArea
             Console.WriteLine("Enter triangle's height? ");
             //todo
             //read key value
+            
 
             // Display the triangle's area.
             Console.WriteLine("The triangle's area is "

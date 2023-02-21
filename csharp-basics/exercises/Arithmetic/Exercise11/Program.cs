@@ -16,7 +16,46 @@
 //  Moran(133) ➞ "M"
 //  Moran(134) ➞ "Neither"
 
-            Console.WriteLine("Hello, World!");
+            Moran(132);
+            Moran(133);
+            Moran(134);
+        }
+       private static void Moran (int n)
+        {
+            int sum = 0;
+            int remainderOfNumber = 0;
+            int copyOfInput = n;
+            
+
+            while(n != 0)
+            {
+                remainderOfNumber = n % 10;
+                sum = sum + remainderOfNumber;
+                n = n / 10;
+            }
+
+            //int prime = 0;
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    if (n % i == 0)
+            //    {
+            //        prime++;
+            //    }
+            //}
+
+            if (copyOfInput % sum == 0)
+            {
+                Console.WriteLine("M");
+            }
+            else if (copyOfInput % sum == 0)
+            {
+                Console.WriteLine("H");
+            }           
+            else
+            {
+                Console.WriteLine("Neither");
+            }
+                
         }
     }
 }

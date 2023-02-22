@@ -37,13 +37,12 @@ namespace CalculateArea
             // Get the user's menu choice.
             // pēc keys (switch if) jānolasa un jāizdara metode. 
 
-            int menuChoice;
             
             
 
                 // Get the user's menu choice.
 
-                menuChoice = GetMenu();
+               int  menuChoice = GetMenu();
 
                 if (menuChoice == 1)
                 {
@@ -102,9 +101,9 @@ namespace CalculateArea
         {
             // Get input from user
             Console.WriteLine("What is the circle's radius? ");
-            //todo
+            var keyboard = Console.ReadLine();
 
-            int input = Convert.ToInt32(Console.ReadLine());
+            
 
             // Display output
             Console.WriteLine("The circle's area is "
@@ -117,7 +116,7 @@ namespace CalculateArea
             decimal width = 0;
 
             // Get input from user
-            int input = Convert.ToInt32(Console.ReadLine());
+            var keyboard = Console.ReadLine();
             // Get length
             Console.WriteLine("Enter length? ");
             //todo
@@ -137,9 +136,10 @@ namespace CalculateArea
             decimal height = 0;
 
             // Get input from user
-            int input = Convert.ToInt32(Console.ReadLine());
+            
             // Get the base
             Console.WriteLine("Enter length of the triangle's base? ");
+          var keyboard = Console.ReadLine();
             //todo
             //read key value
 

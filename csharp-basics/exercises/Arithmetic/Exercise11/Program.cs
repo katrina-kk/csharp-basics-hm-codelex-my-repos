@@ -35,7 +35,7 @@
             }
 
 
-            bool prime = true;
+            bool prime = false;
            
             for (int i = 2; i * i <= sum; i++)
             {
@@ -48,7 +48,7 @@
            
 
 
-            if (copyOfInput % sum == 0 && sum == prime)
+            if (copyOfInput % sum == 0 && prime == false)
             {
                 Console.WriteLine("M");
             }

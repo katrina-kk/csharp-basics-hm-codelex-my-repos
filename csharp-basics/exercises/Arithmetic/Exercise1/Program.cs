@@ -3,9 +3,7 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
-            //Write a C# program to accept two integers and return true if the
-            //either one is 15 or if their sum or difference is 15.
+        {          
             int num1 = 12;
             int num2 = 4;
 

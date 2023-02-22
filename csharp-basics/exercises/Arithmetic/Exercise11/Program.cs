@@ -34,16 +34,21 @@
                 n = n / 10;
             }
 
-            //int prime = 0;
-            //for (int i = 1; i <= n; i++)
-            //{
-            //    if (n % i == 0)
-            //    {
-            //        prime++;
-            //    }
-            //}
 
-            if (copyOfInput % sum == 0)
+            bool prime = true;
+           
+            for (int i = 2; i * i <= sum; i++)
+            {
+                if (sum % i == 0)
+                {
+                    prime = true;
+                    
+                }
+            }
+           
+
+
+            if (copyOfInput % sum == 0 && sum == prime)
             {
                 Console.WriteLine("M");
             }
@@ -55,7 +60,7 @@
             {
                 Console.WriteLine("Neither");
             }
-                
-        }
+
+        }     
     }
 }

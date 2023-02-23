@@ -9,7 +9,6 @@ namespace TenBillion
         static void Main(string[] args)
         {
             Console.WriteLine("Input an integer number less than ten billion: ");
-
             var userInput = Int64.Parse(Console.ReadLine());
 
             bool tooLong = true;

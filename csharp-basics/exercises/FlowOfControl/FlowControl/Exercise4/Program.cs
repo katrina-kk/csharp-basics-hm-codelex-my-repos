@@ -1,6 +1,6 @@
 ﻿namespace Exercise4
 {
-    internal class Program
+    internal class PrintDayInWord
     {
         static void Main(string[] args)
         {

@@ -27,6 +27,7 @@ namespace LargestNumber
             {
                 Console.WriteLine($"The third input {input3} is the biggest from all 3 numbers");
             }
+
             Console.ReadKey();
         }
     }

@@ -22,37 +22,35 @@
             int[] myArray = { 92, 6, 73, -77, 81, -90, 99, 8, -85, 34 };
 
             Console.WriteLine(CountPosSumNeg(myArray));
+
+
         }
+
         static int[] CountPosSumNeg(int[] arr)
         {
-            int[] myArray = new int [2];
-            
-            if(arr.Length ==  null)
-            {
-                return new int[0];
-            }
-
+            int[] myArray = new int[2];
             int sum = 0;
+
+
             for (int i = 0; i < myArray.Length; i++)
             {
+                if (myArray[i] > 0)
+                {
 
-                if(arr[i] > 0)
-                {
-                    //sum += arr[i];
-                    arr.Sum();
                 }
-                else if(arr[i] < 0)
+                else if (myArray[i] < 0)
                 {
-                    //sum += arr[i];
-                    arr.Sum();
+                    sum += myArray[i];
                 }
-                
+                else
+                {
+
+                }
+
+                return arr;
+
             }
-          
-            return  sum;
-
-            
         }
-
     }
 }
+           

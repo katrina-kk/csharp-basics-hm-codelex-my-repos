@@ -9,13 +9,50 @@
             //            If given an empty array, return an empty array: []
             //            Cast sum to int, don't mind the remaining decimal places.
             //0 is not positive.
+            //            CountPosSumNeg([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]) ➞ [10, -65]
+            //// There are a total of 10 positive numbers.
+            //// The sum of all negative numbers equals -65.
 
-            CountPosSumNeg([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]);
+            //CountPosSumNeg([92, 6, 73, -77, 81, -90, 99, 8, -85, 34]) ➞ [7, -252]
+
+            //CountPosSumNeg([91, -4, 80, -73, -28]) ➞ [2, -105]
+
+            //CountPosSumNeg([]) ➞ []
+
+            int[] myArray = { 92, 6, 73, -77, 81, -90, 99, 8, -85, 34 };
+
+            Console.WriteLine(CountPosSumNeg(myArray));
         }
-        static int[] CountPosSumNeg(int[] input)
+        static int[] CountPosSumNeg(int[] arr)
         {
-
-        }
+            int[] myArray = new int [2];
             
+            if(arr.Length ==  null)
+            {
+                return new int[0];
+            }
+
+            int sum = 0;
+            for (int i = 0; i < myArray.Length; i++)
+            {
+
+                if(arr[i] > 0)
+                {
+                    //sum += arr[i];
+                    arr.Sum();
+                }
+                else if(arr[i] < 0)
+                {
+                    //sum += arr[i];
+                    arr.Sum();
+                }
+                
+            }
+          
+            return  sum;
+
+            
+        }
+
     }
 }

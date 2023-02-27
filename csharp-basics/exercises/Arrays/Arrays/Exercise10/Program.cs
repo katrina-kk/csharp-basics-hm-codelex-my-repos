@@ -19,37 +19,50 @@
 
             //CountPosSumNeg([]) ➞ []
 
+            //int[] myArray = { 92, 6, 73, -77, 81, -90, 99, 8, -85, 34 };
+
+            //Console.WriteLine(CountPosSumNeg(myArray));
             int[] myArray = { 92, 6, 73, -77, 81, -90, 99, 8, -85, 34 };
-
-            Console.WriteLine(CountPosSumNeg(myArray));
-
-
-        }
-
-        static int[] CountPosSumNeg(int[] arr)
-        {
-            int[] myArray = new int[2];
-            int sum = 0;
-
+            int sumNegatives = 0;
+            int countPositives = 0;
 
             for (int i = 0; i < myArray.Length; i++)
             {
                 if (myArray[i] > 0)
                 {
-
+                    countPositives++;
                 }
                 else if (myArray[i] < 0)
                 {
-                    sum += myArray[i];
+                    sumNegatives += myArray[i];
                 }
-                else
-                {
-
-                }
-
-                return arr;
 
             }
+
+            Console.WriteLine(countPositives);
+            Console.WriteLine(sumNegatives);
+
+
+            //static int[] CountPosSumNeg(int[] arr)
+            //{
+            //    int[] myArray = new int[2];
+            //    int sumNegatives = 0;
+            //    int countPositives = 0;
+
+            //    for (int i = 0; i < myArray.Length; i++)
+            //    {
+            //        if (myArray[i] > 0)
+            //        {
+            //            countPositives++;
+            //        }
+            //        else if (myArray[i] < 0)
+            //        {
+            //            sumNegatives += myArray[i];
+            //        }
+
+
+
+            //    }
         }
     }
 }

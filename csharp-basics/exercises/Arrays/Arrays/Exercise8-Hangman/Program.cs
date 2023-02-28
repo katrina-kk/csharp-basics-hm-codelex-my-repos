@@ -12,6 +12,8 @@
             //It must display letters they have already guessed(either only the incorrect guesses or all guesses).
 
             string[] words = { "donkey", "dog", "bird" };
+            List<string> usedLetters = new List<string>();      
+            int retryCount = 0;
             Random random = new Random();
             int index = random.Next(words.Length);
             string wordToGuess = words[index];
@@ -22,10 +24,10 @@
             }
 
             
-            bool isStringEmpty = true;
+            
             string letterFromUser;
 
-            while (isStringEmpty)
+            while (true)
             {
                 Console.WriteLine("Please enter a letter: ");
                 letterFromUser = Console.ReadLine();
@@ -34,16 +36,17 @@
                 {
                     Console.WriteLine("Error!Please enter one letter!: ");
                 }
+
                 break;
             }
 
             if (wordToGuess.ToUpper().Contains(letterFromUser.ToUpper()))
             {
-                Console.WriteLine
+                
             }
             else
             {
-
+                ++retryCount;
             }
         }
     }

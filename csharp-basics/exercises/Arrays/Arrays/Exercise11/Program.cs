@@ -1,27 +1,15 @@
 ﻿namespace Exercise11
 {
     internal class Program
-    {     
+    {
         static void Main(string[] args)
         {
-            Console.WriteLine("Do you want to find Nemo? Write one sentence using word Nemo in it or choose not to: ");
-            string findNemo = Console.ReadLine();
-
-            int nemoIndex = GetIndexNemo(findNemo);
-
-            if (nemoIndex != 0)
-            {
-                Console.WriteLine($"I found Nemo at {nemoIndex}!");
-            }
-            else
-            {
-                Console.WriteLine("I can't find Nemo");
-            }
-
-            Console.ReadLine();       
+            FindNemo("I am Nemo");
+            FindNemo("Nemo is here");
+            FindNemo("Elmo is here");      
         }
 
-       static int GetIndexNemo(string findNemo)
+        static int GetIndexNemo(string findNemo)
         {
             string[] words = findNemo.Split(' ');
 
@@ -32,10 +20,26 @@
                     return (i + 1);
                 }
             }
-            
+
             return 0;
         }
-    }   
+
+        static string FindNemo(string input)
+        {
+            string findNemo = " ";
+            int x = GetIndexNemo(input);
+
+            if (x != 0)
+            {
+                Console.WriteLine($"I found Nemo at {x}!");
+            }
+            else
+            {
+                Console.WriteLine("I can't find Nemo");
+            }
+            return findNemo;
+        }
+    }
 }
 
 

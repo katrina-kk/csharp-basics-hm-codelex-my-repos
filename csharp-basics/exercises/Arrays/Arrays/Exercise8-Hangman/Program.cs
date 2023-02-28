@@ -11,7 +11,7 @@
             //It must give them limited tries and stop after they run out.
             //It must display letters they have already guessed(either only the incorrect guesses or all guesses).
 
-            string[] words = { "cat", "dog", "bird" };
+            string[] words = { "donkey", "dog", "bird" };
             Random random = new Random();
             int index = random.Next(words.Length);
             string wordToGuess = words[index];

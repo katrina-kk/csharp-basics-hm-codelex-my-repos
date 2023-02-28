@@ -3,51 +3,96 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
-            //            Write a program to play a word - guessing game like Hangman.
-
-            //It must randomly choose a word from a list of words.
-            //It must stop when all the letters are guessed.
-            //It must give them limited tries and stop after they run out.
-            //It must display letters they have already guessed(either only the incorrect guesses or all guesses).
-
+        {          
             string[] words = { "donkey", "dog", "bird" };
             List<string> usedLetters = new List<string>();      
             int retryCount = 0;
             Random random = new Random();
+            string printableWord = "";
             int index = random.Next(words.Length);
             string wordToGuess = words[index];
 
+            Console.WriteLine("Hello, This is a game Hangman. Let's guess a word. ");
+
+            //replace letters with placeholders in printable version
             foreach (var letter in wordToGuess)
-            {
-                Console.Write(" _ ");
+            {              
+                printableWord += "_";
             }
 
-            
-            
-            string letterFromUser;
-
-            while (true)
+            foreach(var letter in printableWord)
             {
-                Console.WriteLine("Please enter a letter: ");
-                letterFromUser = Console.ReadLine();
+                Console.Write($"{letter} ");
+            }         
+                       
+            string letterFromUser;
+            bool repeatGameAction = true;
 
-                if (string.IsNullOrEmpty(letterFromUser))
+            while (repeatGameAction)
+            {
+                //get letter from user
+                while (true)
                 {
-                    Console.WriteLine("Error!Please enter one letter!: ");
+                    Console.WriteLine("Please enter a letter: ");
+                    letterFromUser = Console.ReadLine();
+
+                    if (string.IsNullOrEmpty(letterFromUser))
+                    {
+                        Console.WriteLine("Error!Please enter one letter!: ");
+                    }
+
+                    break;
                 }
 
-                break;
-            }
+                if (wordToGuess.ToUpper().Contains(letterFromUser.ToUpper()))
+                {
+                    //convert to char array to use index for replacing letters
+                    var charArr = printableWord.ToCharArray();
 
-            if (wordToGuess.ToUpper().Contains(letterFromUser.ToUpper()))
-            {
-                
-            }
-            else
-            {
-                ++retryCount;
-            }
+                    // swap underscores to letters
+                    for (int i = 0; i < wordToGuess.Length; i++)
+                    {
+                        if (wordToGuess[i].ToString().ToUpper() == letterFromUser.ToUpper())
+                        {
+                            charArr[i] = letterFromUser.ToUpper()[0];
+                        }
+                    }
+                    //re-assing new value
+                    printableWord = string.Join("", charArr);
+                }
+                else
+                {
+                    if (!usedLetters.Contains(letterFromUser.ToUpper()))
+                    {
+                        usedLetters.Add(letterFromUser.ToUpper());
+                    }
+
+                    ++retryCount;
+
+                    if(retryCount >= words.Length)
+                    {
+                        Console.WriteLine("Game Over! No more tries");
+                        break;
+                    }
+                    
+                }
+
+                foreach (var letter in printableWord)
+                {
+                    Console.Write($"{letter} ");
+                }
+
+                Console.WriteLine();
+                Console.WriteLine($"Retry count: {retryCount}");
+
+                Console.WriteLine($"Used letters: {string.Join(",", usedLetters)}");
+
+                if(!printableWord.Contains("_"))
+                {
+                    Console.WriteLine("You won. Congratz!!!");
+                    break;
+                }
+            }           
         }
     }
 }

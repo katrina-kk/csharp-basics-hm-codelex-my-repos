@@ -5,22 +5,22 @@ namespace Exercise2
     class Program
     {
         static void Main(string[] args)
-        {
-            //int i, n;
+        {           
+            int i;
+            Console.WriteLine("Input number to multiply with itself: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input number how many times to multiply that number: ");
+            var power = Convert.ToInt32(Console.ReadLine());
+           
+            var answer = 1;
 
-            Console.WriteLine("Input number of terms : ");
-            var n = Convert.ToInt32(Console.ReadLine());
-            int power = n;
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
-            for (power = 0; power < n; power++)
+            for ( i = 0; i < number; i++)
             {
-                  5
+                answer = answer * power;
             }
-            Console.WriteLine(power);
-            Console.ReadKey();
 
+           Console.WriteLine(answer);
+           Console.ReadKey();
         }
     }
 }

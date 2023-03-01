@@ -27,6 +27,7 @@
                 string charBackToString = new string(charString);
                 charBackToString = reverse;
             }
+
             Console.WriteLine();
             return reverse;
         }

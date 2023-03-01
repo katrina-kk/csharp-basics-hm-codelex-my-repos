@@ -4,36 +4,25 @@
     {
         static void Main(string[] args)
         {
-            //    //            Write a console program in a class named AsciiFigure that draws a figure of the following form, using for loops.
+            //Šī piramīdu shēma man tā salauza prātu, ka nevarēju līdz samazināšanas formulai nonākt.Ar matemātiku uz jūs.
 
-            //    // ////////////////\\\\\\\\\\\\\\\\  "/\"
-            //    // ////////////********\\\\\\\\\\\\
-            //    // ////////****************\\\\\\\\
-            //    // ////************************\\\\
-            //    // ********************************
-            //    //Then, modify your program using an integer class constant so that it can create a similar figure of any size.For instance, the diagram above has a size of 5. For example, the figure below has a size of 3:
+            for (int rows = 0; rows < 5; rows++)
+            {
+                for (int toTheRight = 16; toTheRight > (rows * 4); toTheRight--)  // Slash "/" aizpilda visas vietas, ar katru ciklu tās samazinās un to vietā nāk zvaigznītes
+                {
+                    Console.Write("/");
+                }
+                for (int stars = 0; stars < (rows * 8); stars++)
+                {
+                    Console.Write("*");
+                }
+                for (int toTheLeft = 16; toTheLeft > (rows * 4); toTheLeft--)  
+                {
+                    Console.Write(@"\");
+                }
 
-            //    //////////\\\\\\\\
-            //    //////********\\\\
-            //    //****************
-            //    //And the figure below has a size of 7:
-
-            //    //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\
-            //    //////////////////////********\\\\\\\\\\\\\\\\\\\\
-            //    //////////////////****************\\\\\\\\\\\\\\\\
-            //    //////////////************************\\\\\\\\\\\\
-            //    //////////********************************\\\\\\\\
-            //    //////****************************************\\\\
-            //    //************************************************
-
-
-            
-                   
-
-           
-
+                Console.WriteLine();
+            }
         }
-
-
     }
 }

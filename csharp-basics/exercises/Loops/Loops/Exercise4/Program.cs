@@ -17,7 +17,7 @@ namespace Exercise4
             foreach(char c in vowels)
             {
                 Console.Write(c);
-            }
+            }      
             
             Console.ReadLine();
         }

@@ -14,6 +14,7 @@ namespace Exercise1
             {
                 Console.Write($"{i}, ");
             }
+
             Console.ReadKey();
         }
     }

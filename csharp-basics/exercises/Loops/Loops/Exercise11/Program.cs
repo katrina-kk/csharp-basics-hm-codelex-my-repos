@@ -3,26 +3,36 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
-            //            Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+        {  
+            ReverseCase("Happy Birthday");
+            ReverseCase("MANY THANKS");
+            ReverseCase("sPoNtAnEoUs");
+        }
 
-            //ReverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
-            //ReverseCase("MANY THANKS") ➞ "many thanks"
-            //ReverseCase("sPoNtAnEoUs") ➞ "SpOnTaNeOuS"
+        static string ReverseCase(string reverse)
+        {           
+            char[] charString = reverse.ToCharArray();
 
-            Console.WriteLine("Insert a string: ");
-            var userInput = Console.ReadLine();
-
-            char[] charString = userInput.ToCharArray();
-
-           for(int i = 0; i < charString.Length; i++)
+            for (int i = 0; i < charString.Length; i++)
             {
-                if (Char.IsLower[])
+                char ch = charString[i];
+                if (char.IsLower(ch))
                 {
-
+                    Console.Write(char.ToUpper(ch));
                 }
+                else
+                {
+                    Console.Write(char.ToLower(ch));
+                }
+                string charBackToString = new string(charString);
+                charBackToString = reverse;
             }
-            
+            Console.WriteLine();
+            return reverse;
         }
     }
 }
+
+
+
+

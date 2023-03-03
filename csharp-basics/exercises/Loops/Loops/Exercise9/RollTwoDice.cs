@@ -12,7 +12,7 @@
             Console.Write("Enter a number of your desired sum from 2 - 12: ");
             var desiredSum = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < desiredSum; i++)
             {              
                 int dice1 = random.Next(1, 6);
                 int dice2 = random.Next(1, 6);

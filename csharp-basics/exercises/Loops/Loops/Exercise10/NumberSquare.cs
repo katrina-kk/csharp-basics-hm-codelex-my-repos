@@ -15,6 +15,7 @@
                 {
                     Console.Write(j);                   
                 }
+
                 for (int k = userInputMin; k < i; k++)
                 {
                     Console.Write(k);

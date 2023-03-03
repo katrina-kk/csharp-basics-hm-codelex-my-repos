@@ -7,7 +7,7 @@
             Console.WriteLine("Input number in range of 1 - 100 : ");
             var userInput = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = userInput; i <= 101; i++)
+            for (int i = 0; i <= userInput; i++)
             {
                 if (i % 3 == 0)
                 {
@@ -25,6 +25,7 @@
                 {
                     Console.Write($"{i} ");
                 }
+
                 if (i % 20 == 0)
                 {
                     Console.WriteLine("");

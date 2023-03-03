@@ -13,7 +13,7 @@ namespace Exercise2
 
             for ( i = 0; i < number; i++)
             {
-                answer = answer * number;
+                answer *= number;
             }
 
            Console.WriteLine(answer);

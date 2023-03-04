@@ -6,22 +6,23 @@ namespace TicTacToe
     {
         private static char[,] board = new char[3, 3];
 
-       
+
         private static void Main(string[] args)
         {
-            while (true)
+            bool isGameGoing = true;
+            while (isGameGoing)
             {
                 char xPlayer = 'X';
                 char oPlayer = 'O';
                 bool playersDecide = true;
                 int tie = 0;
-               
+
                 InitBoard();
                 DisplayBoard();
 
                 while (playersDecide)
                 {
-                    
+
                     Console.Write("Please choose line where you want to put X: ");
                     var userInputXLine = int.Parse(Console.ReadLine());
                     Console.Write("Please choose column where you want to put X: ");
@@ -30,7 +31,7 @@ namespace TicTacToe
                     DisplayBoard();
                     tie++;
 
-                    if((board[0, 0] == xPlayer && board[0, 1] == xPlayer && board[0, 2] == xPlayer)
+                    if ((board[0, 0] == xPlayer && board[0, 1] == xPlayer && board[0, 2] == xPlayer)
                        || (board[1, 0] == xPlayer && board[1, 1] == xPlayer && board[1, 2] == xPlayer)
                        || (board[2, 0] == xPlayer && board[2, 1] == xPlayer && board[2, 2] == xPlayer)
                        || (board[2, 2] == xPlayer && board[1, 1] == xPlayer && board[0, 0] == xPlayer)
@@ -42,45 +43,21 @@ namespace TicTacToe
                         Console.WriteLine("X won!");
                         break;
                     }
-                    else if((board[0, 0] == oPlayer && board[0, 1] == oPlayer && board[0, 2] == oPlayer)
-                       || (board[1, 0] == oPlayer && board[1, 1] == oPlayer && board[1, 2] == oPlayer)
-                       || (board[2, 0] == oPlayer && board[2, 1] == oPlayer && board[2, 2] == oPlayer)
-                       || (board[2, 2] == oPlayer && board[1, 1] == oPlayer && board[0, 0] == oPlayer)
-                       || (board[0, 2] == oPlayer && board[1, 1] == oPlayer && board[2, 0] == oPlayer)
-                       || (board[0, 0] == oPlayer && board[1, 0] == oPlayer && board[2, 0] == oPlayer)
-                       || (board[0, 1] == oPlayer && board[1, 1] == oPlayer && board[2, 1] == oPlayer)
-                       || (board[0, 2] == oPlayer && board[1, 2] == oPlayer && board[2, 2] == oPlayer))
-                    {
-                        Console.WriteLine("O won!");
-                        break;
-                    }
                     else if (tie == 9)
-                    {                       
+                    {
                         Console.WriteLine("It's a tie");
                         break;
                     }
-                   
-                    Console.Write("Please choose line where you want to put 0: ");
+
+                    Console.Write("Please choose line where you want to put O: ");
                     var userInputOLine = int.Parse(Console.ReadLine());
-                    Console.Write("Please choose column where you want to put 0: ");
+                    Console.Write("Please choose column where you want to put O: ");
                     var userInputOColumn = int.Parse(Console.ReadLine());
                     board[userInputOLine, userInputOColumn] = oPlayer;
                     DisplayBoard();
                     tie++;
 
-                    if((board[0, 0] == xPlayer && board[0, 1] == xPlayer && board[0, 2] == xPlayer)
-                       || (board[1, 0] == xPlayer && board[1, 1] == xPlayer && board[1, 2] == xPlayer)
-                       || (board[2, 0] == xPlayer && board[2, 1] == xPlayer && board[2, 2] == xPlayer)
-                       || (board[2, 2] == xPlayer && board[1, 1] == xPlayer && board[0, 0] == xPlayer)
-                       || (board[0, 2] == xPlayer && board[1, 1] == xPlayer && board[2, 0] == xPlayer)
-                       || (board[0, 0] == xPlayer && board[1, 0] == xPlayer && board[2, 0] == xPlayer)
-                       || (board[0, 1] == xPlayer && board[1, 1] == xPlayer && board[2, 1] == xPlayer)
-                       || (board[0, 2] == xPlayer && board[1, 2] == xPlayer && board[2, 2] == xPlayer))
-                    {
-                        Console.WriteLine("X won!");
-                        break;
-                    }
-                    else if((board[0, 0] == oPlayer && board[0, 1] == oPlayer && board[0, 2] == oPlayer)
+                    if ((board[0, 0] == oPlayer && board[0, 1] == oPlayer && board[0, 2] == oPlayer)
                        || (board[1, 0] == oPlayer && board[1, 1] == oPlayer && board[1, 2] == oPlayer)
                        || (board[2, 0] == oPlayer && board[2, 1] == oPlayer && board[2, 2] == oPlayer)
                        || (board[2, 2] == oPlayer && board[1, 1] == oPlayer && board[0, 0] == oPlayer)
@@ -105,13 +82,13 @@ namespace TicTacToe
         }
 
         private static void InitBoard()
-        {          
+        {
             // fills up the board with blanks
             for (var r = 0; r < 3; r++)
             {
                 for (var c = 0; c < 3; c++)
                     board[r, c] = ' ';
-            }          
+            }
         }
 
         private static void DisplayBoard()

@@ -23,15 +23,17 @@
             foreach(var letter in printableWord)
             {
                 Console.Write($"{letter} ");
-            }         
-                       
-            string letterFromUser;
+            }
+
+            string letterFromUser = null!;
             bool repeatGameAction = true;
+            bool isInputValid = true;
 
             while (repeatGameAction)
             {
+               
                 //get letter from user
-                while (true)
+                while (isInputValid)
                 {
                     Console.WriteLine("Please enter a letter: ");
                     letterFromUser = Console.ReadLine();

@@ -20,19 +20,19 @@
         {
             int[] arr = { 92, 6, 73, -77, 81, -90, 99, 8, -85, 34 };
             Console.WriteLine(string.Join(" ", CountPosSumNeg(arr)));
-            int[] arr2 = { 91, -4, 80, -73, -28};
+            int[] arr2 = { 91, -4, 80, -73, -28 };
             Console.WriteLine(string.Join(" ", CountPosSumNeg(arr2)));
-            int[] arr3 = {  };
+            int[] arr3 = { };
             Console.WriteLine(string.Join(" ", CountPosSumNeg(arr3)));
         }
 
-            static int[] CountPosSumNeg(int[] arr)
-            {
+        static int[] CountPosSumNeg(int[] arr)
+        {
             int[] myArray = arr;
-                int sumNegatives = 0;
-                int countPositives = 0;
+            int sumNegatives = 0;
+            int countPositives = 0;
 
-            if(myArray.Length == null)
+            if (myArray.Length == null)
             {
                 return new int[0];
             }
@@ -46,11 +46,10 @@
                 else if (myArray[i] < 0)
                 {
                     sumNegatives += myArray[i];
-                }                
+                }
             }
             int[] positivesNegatives = { countPositives, sumNegatives };
             return positivesNegatives;
         }
     }
 }
-           

@@ -1,4 +1,4 @@
-# C# Syllabus
+# C# Syllabus. Intensive study program material from https://www.codelex.io/
 
 ## [Work Environment Setup](./work-environment-setup)
 
